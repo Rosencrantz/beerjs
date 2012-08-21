@@ -1,0 +1,87 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	#header,
+	aside { display: none !important; }
+	section {
+		height: auto !important; /* overrides height added via JS */
+		padding: 20px 0;
+	}
+	h1 {
+		margin: 0;
+		font-size: 2.5em;
+		position: static;
+	}
+	div.grid {
+		width: auto;
+	}
+	div.syd,
+	div.mel,
+	#splash-syd,
+	#splash-mel {
+		float: none;
+		margin: 20px 0 0 0;
+		padding: 0 20px;
+		width: auto;
+	}
+	#splash-syd {
+		font-size: 1.4em;
+	}
+	#about h6 {
+		position: static;
+	}
+	#about h6.round.lettering,
+	#about h6.round.lettering span {
+		-webkit-transform: initial;
+		transform: initial;
+		text-align: center;
+	}
+	#splash p {
+		text-align: center;
+	}
+	#about h2 {
+		margin: 0;
+		line-height: 1;
+	}
+	h6 span {
+		position: static;
+	}
+
+	#sponsors-syd p {
+		margin: 0 auto;
+		left: -20px;
+	}
+
+	#sponsors-syd p.sml {
+		margin: 0 auto;
+		left: 20px;
+	}
+
+	#location a {
+		height: 280px;
+		position: static;
+		margin: 0 auto 1em;
+		width: 280px;
+	}
+	#location p {
+		margin: 0 auto;
+		width: auto;
+	}
+	#about h3,
+	#rsvp h3,
+	#location h3 {
+		margin-bottom: 10px;
+	}
+	#rsvp div {
+		text-align: center;
+	}
+	#rsvp .button {
+		margin: 20px auto 0;
+	}
+	#rsvp p {
+		margin: 1em auto;
+		text-align: center;
+		width: auto;
+	}
+}
