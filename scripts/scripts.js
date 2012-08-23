@@ -32,6 +32,55 @@
 	};
 	KEY.init();
 
+	var CASH = {
+		states: {
+			sydney: {
+				sponsors: ["lookahead"],
+				durations: [60],
+				count: 0,
+				rotating: null
+			},
+			melbourne: {
+				sponsors: ["bugherd", "inspire9"],
+				durations: [10, 10],
+				count: 0,
+				rotating: null
+			}
+		},
+		stop: function () {
+			$("#lookahead, #bugherd, #inspire9").stop();
+		},
+		trigger: function () {
+			this.rotate("sydney");
+			this.rotate("melbourne");
+		},
+		rotate: function (state) {
+			var _this = CASH.states[state],
+				current = "#sponsors-" + _this.sponsors[_this.count],
+				count = _this.count + 1,
+				length = _this.sponsors.length - 1,// zer0
+				target;
+
+			if (_this.rotating) {clearTimeout(_this.rotating)}
+
+			if (count > length) {count = 0;}
+
+			target = "#sponsors-" + _this.sponsors[count];
+
+			if (current !== target) {
+				$(current).fadeOut(600);
+				$(target).fadeIn(600);
+			} 
+
+			_this.count = count;
+			_this.rotating = setTimeout(function () {
+				CASH.rotate(state)
+			}, _this.durations[_this.count] * 1000)
+		},
+		init: function () {
+		}
+	};
+
 	var BEER = {
 		direction: null,
 		offsets: [],
@@ -113,6 +162,14 @@
 					BEER.scrolled((direction === "down") ? $(this).index() : $(this).index() - 1);
 				}).each(function(index){
 					BEER.offsets.push($(BEER.sections[index]).offset().top);
+				});
+
+				$("#sponsors").waypoint(function(event, direction){
+					CASH.trigger();
+				});
+
+				$("#about, #location").waypoint(function(event, direction){
+					CASH.stop();
 				});
 
 				$("h6").lettering();

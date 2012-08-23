@@ -166,57 +166,57 @@ div.mel {
 	color: rgb(65, 67, 63);
 }
 
-#sponsors a {
+#sponsors p {
+	border-radius: 250px;
 	box-shadow: 6px 6px 6px rgba(0, 0, 0, .2);
 	display: block;
-	margin-top: 40px;
-}
-
-#sponsors span {
-	display: block;
-	text-indent: -999em;
-}
-
-#sponsors-syd a {
-	border-radius: 200px;
-	height: 200px;
-	margin-top: 40px;
-	width: 200px;
-}
-
-#sponsors-mel a {
-	background: url(../graphics/sponsors/bugherd_logo_med.png) 50% 50%;
-	border-radius: 250px;
 	height: 250px;
-	margin: 0 auto;
+	left: 25px;
+	position: absolute;
+	top: 99px;
 	width: 250px;
 }
 
-#sponsors-syd p {
-	background: rgba(0, 0, 0, .2);
-	border-radius: 120px;
-	height: 120px;
-	margin-top: 40px;
-	position: relative;
-	width: 120px;
+#sponsors a {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border-radius: 225px;
+	display: block;
+	height: 225px;
+	left: 12px;
+	position: absolute;
+	width: 225px;
+	top: 12px;
 }
 
-#sponsors-syd p.sml {
-	border-radius: 80px;
-	height: 80px;
-	margin: 40px 0 0 80px;
-	width: 80px;
+#sponsors img {
+	width: 100%;
 }
 
-#sponsors-syd b {
-	left: 42px;
-	position: absolute;
-	top: 44px;
+#sponsors-lookahead {
+	background-color: rgb(55, 55, 55);
 }
-#sponsors-syd p.sml b {
-	left: 14px;
-	position: absolute;
-	top: 25px;
+
+#sponsors-lookahead img {
+	margin-top: 85px;
+}
+
+#sponsors-bugherd {
+	background-color: rgb(34, 34, 34);
+}
+
+#sponsors-bugherd img {
+	margin-left: -15px;
+	margin-top: -15px;
+	width: 120%;
+}
+
+#sponsors-inspire9 {
+	background-color: white;
+}
+
+#sponsors-inspire9 img {
+	margin-top: 55px;
 }
 
 #rsvp {
@@ -229,7 +229,6 @@ div.mel {
 	box-shadow: 6px 6px 6px rgba(0, 0, 0, .2);
 	display: block;
 	height: 300px;
-	margin-top: 40px;
 	position: absolute;
 	width: 300px;
 }
