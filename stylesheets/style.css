@@ -193,6 +193,10 @@ div.mel {
 	width: 100%;
 }
 
+#sponsors div div {
+	height: 380px;
+} 
+
 #sponsors-lookahead {
 	background-color: rgb(55, 55, 55);
 }
