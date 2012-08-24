@@ -35,20 +35,20 @@
 	var CASH = {
 		states: {
 			sydney: {
-				sponsors: ["lookahead"],
-				durations: [60],
+				sponsors: ["lookahead", "webdirections"],
+				durations: [6, 5],
 				count: 0,
 				rotating: null
 			},
 			melbourne: {
 				sponsors: ["bugherd", "inspire9"],
-				durations: [10, 10],
+				durations: [5, 5],
 				count: 0,
 				rotating: null
 			}
 		},
 		stop: function () {
-			$("#lookahead, #bugherd, #inspire9").stop();
+			$("#lookahead, #webdirections, #bugherd, #inspire9").stop();
 		},
 		trigger: function () {
 			this.rotate("sydney");
